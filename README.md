@@ -50,7 +50,7 @@ Run the following command to train the MDM model:
 python -m script.train_mdm --config DM-RSC/configs/MDM/fastec_train_MDM.yaml
 ```
 
-### Train MDM Model
+### Train ODM Model
 
 Run the following command to train the ODM model:
 
