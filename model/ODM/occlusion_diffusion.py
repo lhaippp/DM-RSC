@@ -67,7 +67,7 @@ class ODM(nn.Module):
         min_snr_gamma = 5
     ):
         super().__init__()
-        assert not (type(self) == ODM and model.channels != model.out_dim)
+        #assert not (type(self) == ODM and model.channels != model.out_dim)
         assert not model.random_or_learned_sinusoidal_cond
 
         self.model = model

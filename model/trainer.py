@@ -28,7 +28,7 @@ from denoising_diffusion_pytorch.version import __version__
 from accelerate import DistributedDataParallelKwargs
 ddp_kwargs = DistributedDataParallelKwargs(find_unused_parameters=True)
 #from utils import *
-from flow_utils import *
+from model.flow_utils import *
 
 # constants
 import re
@@ -92,7 +92,7 @@ class Trainer(object):
             self.ema.to(self.device)
 
         self.results_folder = Path(results_folder)
-        self.results_folder.mkdir(exist_ok=True)
+        self.results_folder.mkdir(parents=True, exist_ok=True)
 
         self.step = 0
 
